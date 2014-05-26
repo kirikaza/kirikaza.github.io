@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { font-size: 20px; }
+    html, body { transform: translate3d(0,0,0); }
+    html, body { margin: 0; padding: 0; }
+  </style>
+  <!-- meta name="viewport" content=""/ -->
+</head>
+<body>
+<script>
+function viewport() {
+  var viewport = document.getElementsByTagName('meta')[0];
+  if (viewport) { 
+    viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no';
+  } else {
+    var viewport = document.createElement('meta');
+    viewport.name = 'viewport';
+    viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(viewport);
+  } 
+}
+</script>
+<br/><br/>
+<p>text text text, a lot of text, more and more</p>
+<a onclick="viewport(); return false">
+<div style="width:310px; height:310px; background-color:#69C; border:solid 5px #F0C;"></div>
+</a>
+</body>
+</html>
